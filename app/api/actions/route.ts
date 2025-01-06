@@ -39,6 +39,7 @@ export const POST = async (req: Request) => {
         try{
             account = new PublicKey(body.account);
         } catch(err) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             return new Response("Invalid account provided", {
                 status: 400,
                 headers: ACTIONS_CORS_HEADERS,
@@ -73,6 +74,7 @@ export const POST = async (req: Request) => {
 
         return Response.json(payload, { headers: ACTIONS_CORS_HEADERS});
     } catch (err) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         return Response.json("An unknown error has occured", {status: 400})
     }
 }
