@@ -4,8 +4,6 @@ import {
     MEMO_PROGRAM_ID,
     ActionGetResponse,
     ActionPostRequest,
-    createActionHeaders,
-    ActionError,
     ACTIONS_CORS_HEADERS,
   } from "@solana/actions";
   import {
