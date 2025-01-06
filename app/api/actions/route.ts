@@ -3,7 +3,7 @@ import { ACTIONS_CORS_HEADERS, ActionGetResponse } from "@solana/actions"
 export const GET = (req: Request) => {
 
     const payload : ActionGetResponse = {
-        icon: new URL("/solana_devs.jpg", new URL(req.url).origin).toString(),
+        icon: new URL("/solana_ai.webp", new URL(req.url).origin).toString(),
         label: "Send Memo",
         description: "This is a super simple action",
         title: "Memo Demo"
