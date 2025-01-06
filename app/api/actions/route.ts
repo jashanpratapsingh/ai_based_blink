@@ -32,19 +32,12 @@ export const GET = (req: Request) => {
 export const OPTIONS = GET;
 
 export const POST = async (req: Request) => {
-    try {
+    
         const body: ActionPostRequest = await req.json();
 
         let account: PublicKey;
-        try{
+        
             account = new PublicKey(body.account);
-        } catch(err) {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            return new Response("Invalid account provided", {
-                status: 400,
-                headers: ACTIONS_CORS_HEADERS,
-            })
-        }
 
         const transaction = new Transaction();
 
@@ -73,8 +66,4 @@ export const POST = async (req: Request) => {
         })
 
         return Response.json(payload, { headers: ACTIONS_CORS_HEADERS});
-    } catch (err) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        return Response.json("An unknown error has occured", {status: 400})
-    }
 }
