@@ -35,9 +35,7 @@ export const POST = async (req: Request) => {
     
         const body: ActionPostRequest = await req.json();
 
-        let account: PublicKey;
-        
-            account = new PublicKey(body.account);
+        const account: PublicKey = new PublicKey(body.account);
 
         const transaction = new Transaction();
 
