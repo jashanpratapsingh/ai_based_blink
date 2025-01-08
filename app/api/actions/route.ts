@@ -19,9 +19,9 @@ export const GET = (req: Request) => {
 
     const payload : ActionGetResponse = {
         icon: new URL("/solana_ai.webp", new URL(req.url).origin).toString(),
-        label: "Send Memo",
-        description: "This is a super simple action",
-        title: "Memo Demo"
+        label: "Solana AI blink",
+        description: "This blink is meant for making the Ai transactions using an llm on the blink network",
+        title: "Solana AI blink"
     }
 
     return Response.json(payload, {headers: ACTIONS_CORS_HEADERS});  
